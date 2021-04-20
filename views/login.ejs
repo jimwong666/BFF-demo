@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登录</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="keywords" content="博客,登录">
+    <meta http-equiv="description" content="登录">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+    <link rel='stylesheet' href='/public/style/base/common.css' />
+  </head>
+  <body>
+    <form method="POST" action="/login">
+      <label for="userName">登录名</label>
+      <input type="text" placeholder="登录名" name="userName" id="userName" value="<%= locals.userName || ''  %>" />
+      <label for="password">密码</label>
+      <input type="password" placeholder="密码" name="password" id="password" value="<%= locals.password || ''  %>" />
+      <hr>
+      <div>
+        <%= locals.error || '' %> 
+      </div>
+      <button type="submit">登录</button>
+    </form>
+  </body>
+</html>
