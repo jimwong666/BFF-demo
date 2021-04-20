@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: 
+Disallow: /bin/
+Disallow: /client/
+Disallow: /lib/
+Disallow: /log/
+Disallow: /routes/
+Sitemap: http://domain.com/sitemap.xml
