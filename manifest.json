@@ -1,0 +1,65 @@
+
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "my blog",
+    "icons": {
+		"16": "public/images/ico/ico-16.png",
+		"48": "public/images/ico/ico-48.png",
+		"128": "public/images/ico/ico-128.png"
+    },
+    "default_locale": "en",
+    "browser_action": {
+		"default_icon": "image/icon-128.png",
+        "default_title": "My Test",
+		"default_popup": "html/browser.html"
+    },
+    "page_action": {
+        "default_icon": "image/icon-48.png",
+        "default_title": "My Test",
+		"default_popup": "html/page.html"
+    },
+    "theme": {},
+    "app": {},
+    "background": {
+		"scripts": [
+        	"lib/jquery-3.3.1.min.js",
+        	"js/background.js"
+		],
+		"page":"html/background.html"
+    },
+    "chrome_url_overrides": {
+		"pageToOverride": "html/overrides.html"
+    },
+    "content_scripts": [{
+		"matches": ["https://www.baidu.com/*"],
+		"css": ["css/mystyles.css"],
+		"js": ["lib/jquery-3.3.1.min.js", "js/content.js"]
+    }],
+    "content_security_policy": "",
+    "file_browser_handlers": [],
+    "homepage_url": "http://xxx",
+    "incognito": "spanning",
+    "intents": {},
+    "key": "",
+    "minimum_chrome_version": "1.0",
+    "nacl_modules": [],
+    "offline_enabled": true,
+    "omnibox": {
+		"keyword": "myKey"
+    },
+    "options_page": "aFile.html",
+    "permissions": [
+		"https://www.baidu.com/*",
+		"background",
+		"tabs"
+    ], 
+    "plugins": [{
+		"path": "extension_plugin.dll",
+		"public": true
+    }], 
+    "requirements": {},
+    "update_url": "http://path/to/updateInfo.xml",
+    "web_accessible_resources": []
+}
